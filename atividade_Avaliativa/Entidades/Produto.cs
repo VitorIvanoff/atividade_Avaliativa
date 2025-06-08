@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace atividade_Avaliativa
 {
-    class Produto
+    public class Produto
     {
         private int id;
         private string nome;

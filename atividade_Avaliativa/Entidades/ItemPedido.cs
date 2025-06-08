@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace atividade_Avaliativa
 {
-    class ItemPedido
+    public class ItemPedido
     {
         private Produto produto;
         private int quantidade;
-
+        
         public ItemPedido(Produto produto, int quantidade)
         {
             this.produto = produto;
