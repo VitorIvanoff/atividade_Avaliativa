@@ -1,4 +1,5 @@
-﻿using System;
+﻿using atividade_Avaliativa.Estrategias;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace atividade_Avaliativa.Servicos
                     Console.WriteLine("\t\tCategoria: " + itemPedido.getProduto().getCategoria());
                     Console.WriteLine("\t\tQuantidade: " + itemPedido.getQuantidade());
                     Console.WriteLine("\t\tPreço: R$" + itemPedido.getProduto().getPreco());
-                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItem());
+                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorCategoria()));
                     Console.WriteLine("\t----------------------------------");
                 }
                 Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.getValorTotal()); 

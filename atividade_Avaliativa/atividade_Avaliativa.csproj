@@ -47,7 +47,7 @@
     <Compile Include="Entidades\ItemPedido.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
-    <Compile Include="Estrategias\Desconto.cs" />
+    <Compile Include="Estrategias\EstrategiaDesconto.cs" />
     <Compile Include="Estrategias\EstrategiaDescontoPorCategoria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

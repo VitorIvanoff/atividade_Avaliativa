@@ -1,4 +1,5 @@
-﻿using System;
+﻿using atividade_Avaliativa.Estrategias;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace atividade_Avaliativa
 {
-    class Pedido
+    public class Pedido
     {
         private int id;
         private Cliente cliente;
@@ -27,9 +28,10 @@ namespace atividade_Avaliativa
 
         private void CalcularValorTotal()
         {        
+
             foreach (ItemPedido itemPedido in this.itensPedido)
             {
-                this.valorTotal += itemPedido.ValorTotalItem();
+                this.valorTotal += itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorCategoria());
             }
         }
 

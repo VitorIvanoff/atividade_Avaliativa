@@ -8,6 +8,6 @@ namespace atividade_Avaliativa.Estrategias
 {
     public interface IEstrategiaDesconto
     {
-         double AplicarDesconto(List<ItemPedido> itensPedido);     
+        double AplicarDesconto(Produto produto);
     }
 }

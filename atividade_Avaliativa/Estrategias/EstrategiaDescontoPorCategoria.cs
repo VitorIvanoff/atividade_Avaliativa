@@ -9,17 +9,13 @@ namespace atividade_Avaliativa.Estrategias
 
     class EstrategiaDescontoPorCategoria : IEstrategiaDesconto
     {
-        public double AplicarDesconto(List<ItemPedido> itensPedido)
+        public double AplicarDesconto(Produto produto)
         {
-            foreach (ItemPedido itemPedido in itensPedido)
-            {
-                double precoAtual = itemPedido.getProduto().getPreco();
+            double precoAtual = produto.getPreco();
 
-                if (itemPedido.getProduto().getCategoria() == "Diversos") return (precoAtual * 0.10);
+            if (produto.getCategoria() == "Diversos") return (precoAtual - (precoAtual * 0.10));
 
-                return precoAtual;
-            }
-            return 0;
+            return precoAtual;            
         }
     }
 }
