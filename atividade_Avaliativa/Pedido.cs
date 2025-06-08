@@ -10,16 +10,16 @@ namespace atividade_Avaliativa
     {
         private int id;
         private Cliente cliente;
-        private List<Produto> produtos;
+        private List<ItemPedido> itensPedido;
         private DateTime data;
         private double valorTotal;
 
 
-        public Pedido(int id, Cliente cliente, List<Produto> produtos, DateTime data)
+        public Pedido(int id, Cliente cliente, List<ItemPedido> itensPedido, DateTime data)
         {
             this.id = id;
             this.cliente = cliente;
-            this.produtos = produtos;
+            this.itensPedido = itensPedido;
             this.data = data;
 
             CalcularValorTotal();
@@ -27,9 +27,9 @@ namespace atividade_Avaliativa
 
         private void CalcularValorTotal()
         {        
-            foreach (Produto produto in this.produtos)
+            foreach (ItemPedido itemPedido in this.itensPedido)
             {
-                this.valorTotal += produto.getPreco();
+                this.valorTotal += itemPedido.ValorTotalItem();
             }
         }
 
@@ -39,10 +39,10 @@ namespace atividade_Avaliativa
         public Cliente getCliente() { return this.cliente; }
         public void setCliente(Cliente cliente) { this.cliente = cliente; }
 
-        public List<Produto> getProdutos() { return this.produtos; }
-        public void setProdutos(List<Produto> produtos)
+        public List<ItemPedido> getItensPedido() { return this.itensPedido; }
+        public void setItensPedido(List<ItemPedido> itensPedido)
         {
-            this.produtos = produtos;
+            this.itensPedido = itensPedido;
             CalcularValorTotal();
         }
 
