@@ -10,17 +10,19 @@ namespace atividade_Avaliativa
     {
         static void Main(string[] args)
         {
+            Produto produto;
+            try
+            {
+                 produto = new Produto("1", "Lápis", 0, "Diversos");
+               
+            }
+            catch(Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            
         }
-    }
-
-    class Produto
-    {
-        private string id { get; set; }
-        private string nome { get; set; }
-        private string pedido { get; set; }
-        private string categoria { get; set; }
-
-
     }
 
 }
