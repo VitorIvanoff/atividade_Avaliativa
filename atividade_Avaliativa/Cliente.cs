@@ -23,16 +23,16 @@ namespace atividade_Avaliativa
         }
 
 
-        public int getId() { return id; }
+        public int getId() { return this.id; }
         public void setId(int id) { this.id = id; }
 
-        public string getNome() { return nome; }
+        public string getNome() { return this.nome; }
         public void setNome(string nome) { this.nome = nome; }
 
-        public string getEmail() { return email; }
+        public string getEmail() { return this.email; }
         public void setEmail(string email) { this.email = email; }
 
-        public string getCpf() { return cpf; }
+        public string getCpf() { return this.cpf; }
         public void setCpf (string cpf) { this.cpf = cpf; }
 
 

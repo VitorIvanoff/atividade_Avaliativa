@@ -34,16 +34,16 @@ namespace atividade_Avaliativa
             return true;
         }
 
-        public int getId () { return id; }
+        public int getId () { return this.id; }
         public void setId(int id) { this.id = id; }
 
-        public string getNome () { return nome; }
+        public string getNome () { return this.nome; }
         public void setNome(string nome) { this.nome = nome; }
 
-        public double getPreco () { return preco; }
+        public double getPreco () { return this.preco; }
         public void setPreco (double preco) { this.preco = preco; }
 
-        public string getCategoria () { return categoria; }
+        public string getCategoria () { return this.categoria; }
         public void setCategoria(string categoria) { this.categoria = categoria; }
     }
 
