@@ -29,7 +29,8 @@ namespace atividade_Avaliativa.Servicos
                     itemPedido.DescricaoItemPedido();
                 }
 
-                Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.GetValorTotal()); 
+                Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.GetValorTotal());
+                Console.WriteLine("------------------------------------------\n");
             }
         }
     }

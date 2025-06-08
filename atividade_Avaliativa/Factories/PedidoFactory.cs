@@ -8,9 +8,9 @@ namespace atividade_Avaliativa.Factories
 {
     class PedidoFactory
     {
-        //public Pedido CriarPedido(int id, Cliente cliente, List<ItemPedido> itens)
-        //{
-        //    return new Pedido(id, cliente, itens);
-        //}
+        public Pedido CriarPedido(int id, Cliente cliente, List<ItemPedido> itens, DateTime data)
+        {
+            return new Pedido(id, cliente, itens, data);
+        }
     }
 }
