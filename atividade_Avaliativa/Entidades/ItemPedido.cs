@@ -18,20 +18,15 @@ namespace atividade_Avaliativa
             this.quantidade = quantidade;
         }
 
-        public double ValorTotalItem()
-        {
-            return produto.getPreco() * quantidade;
-        }
-
-        public double ValorTotalItemComDesconto(IEstrategiaDesconto estrategiaDesconto)
+        public double ValorTotalItem(IEstrategiaDesconto estrategiaDesconto)
         {
             return estrategiaDesconto.AplicarDesconto(this) * quantidade;
         }
 
-        public Produto getProduto() {return this.produto;}
-        public void setProduto(Produto produto) {this.produto = produto;}
+        public Produto GetProduto() {return this.produto;}
+        public void SetProduto(Produto produto) {this.produto = produto;}
 
-        public int getQuantidade() {return this.quantidade;}
-        public void setQuantidade(int quantidade) { this.quantidade = quantidade;}
+        public int GetQuantidade() {return this.quantidade;}
+        public void SetQuantidade(int quantidade) { this.quantidade = quantidade;}
     }
 }

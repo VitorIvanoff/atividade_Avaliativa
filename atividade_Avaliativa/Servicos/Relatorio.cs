@@ -21,22 +21,22 @@ namespace atividade_Avaliativa.Servicos
         {
             foreach (Pedido pedido in this.pedidos)
             {
-                Console.WriteLine(pedido.getId() + " | " + pedido.getData()+ "\n");
-                Console.WriteLine("\tID: "+ pedido.getCliente().getId() +  "\n\tCliente: " + pedido.getCliente().getNome() + "\n\tCPF: " + pedido.getCliente().getCpf() + "\n\tE-mail: " + pedido.getCliente().getEmail() + "\n");
+                Console.WriteLine(pedido.GetId() + " | " + pedido.GetData()+ "\n");
+                Console.WriteLine("\tID: "+ pedido.GetCliente().GetId() +  "\n\tCliente: " + pedido.GetCliente().GetNome() + "\n\tCPF: " + pedido.GetCliente().GetCpf() + "\n\tE-mail: " + pedido.GetCliente().GetEmail() + "\n");
                 Console.WriteLine("\tItens do Pedido: ");
 
-                foreach (ItemPedido itemPedido in pedido.getItensPedido())
+                foreach (ItemPedido itemPedido in pedido.GetItensPedido())
                 {
-                    Console.WriteLine("\t\tID: " + itemPedido.getProduto().getId());
-                    Console.WriteLine("\t\tProduto: " + itemPedido.getProduto().getNome());
-                    Console.WriteLine("\t\tCategoria: " + itemPedido.getProduto().getCategoria());
-                    Console.WriteLine("\t\tQuantidade: " + itemPedido.getQuantidade());
-                    Console.WriteLine("\t\tPreço: R$" + itemPedido.getProduto().getPreco());
-                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorQuantidade()));
+                    Console.WriteLine("\t\tID: " + itemPedido.GetProduto().GetId());
+                    Console.WriteLine("\t\tProduto: " + itemPedido.GetProduto().GetNome());
+                    Console.WriteLine("\t\tCategoria: " + itemPedido.GetProduto().GetCategoria());
+                    Console.WriteLine("\t\tQuantidade: " + itemPedido.GetQuantidade());
+                    Console.WriteLine("\t\tPreço: R$" + itemPedido.GetProduto().GetPreco());
+                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItem(new EstrategiaDescontoPorQuantidade()));
                     Console.WriteLine("\t----------------------------------");
                 }
-                Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.getValorTotal()); 
 
+                Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.GetValorTotal()); 
             }
         }
     }

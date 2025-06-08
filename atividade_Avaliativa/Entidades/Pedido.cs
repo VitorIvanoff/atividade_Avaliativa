@@ -15,7 +15,6 @@ namespace atividade_Avaliativa
         private DateTime data;
         private double valorTotal;
 
-
         public Pedido(int id, Cliente cliente, List<ItemPedido> itensPedido, DateTime data)
         {
             this.id = id;
@@ -28,29 +27,28 @@ namespace atividade_Avaliativa
 
         private void CalcularValorTotal()
         {        
-
             foreach (ItemPedido itemPedido in this.itensPedido)
             {
-                this.valorTotal += itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorQuantidade());
+                this.valorTotal += itemPedido.ValorTotalItem(new EstrategiaDescontoPorQuantidade());
             }
         }
 
-        public int getId () { return this.id; }
-        public void setId(int id) { this.id = id; }
+        public int GetId() { return this.id; }
+        public void SetId(int id) { this.id = id; }
 
-        public Cliente getCliente() { return this.cliente; }
-        public void setCliente(Cliente cliente) { this.cliente = cliente; }
+        public Cliente GetCliente() { return this.cliente; }
+        public void SetCliente(Cliente cliente) { this.cliente = cliente; }
 
-        public List<ItemPedido> getItensPedido() { return this.itensPedido; }
-        public void setItensPedido(List<ItemPedido> itensPedido)
+        public List<ItemPedido> GetItensPedido() { return this.itensPedido; }
+        public void SetItensPedido(List<ItemPedido> itensPedido)
         {
             this.itensPedido = itensPedido;
             CalcularValorTotal();
         }
 
-        public DateTime getData() { return this.data; }
-        public void setData(DateTime data) { this.data = data; }
+        public DateTime GetData() { return this.data; }
+        public void SetData(DateTime data) { this.data = data; }
 
-        public double getValorTotal() { return this.valorTotal; }
+        public double GetValorTotal() { return this.valorTotal; }
     }
 }

@@ -11,9 +11,9 @@ namespace atividade_Avaliativa.Estrategias
     {
         public double AplicarDesconto(ItemPedido itemPedido)
         {
-            double precoAtual = itemPedido.getProduto().getPreco();
+            double precoAtual = itemPedido.GetProduto().GetPreco();
 
-            if (itemPedido.getProduto().getCategoria() == "Diversos") return (precoAtual - (precoAtual * 0.10));
+            if (itemPedido.GetProduto().GetCategoria() == "Diversos") return (precoAtual - (precoAtual * 0.10));
 
             return precoAtual;            
         }

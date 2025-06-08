@@ -50,6 +50,7 @@
     <Compile Include="Estrategias\EstrategiaDesconto.cs" />
     <Compile Include="Estrategias\EstrategiaDescontoPorCategoria.cs" />
     <Compile Include="Estrategias\EstrategiaDescontoPorQuantidade.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicos\Relatorio.cs" />

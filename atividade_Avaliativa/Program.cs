@@ -12,7 +12,7 @@ namespace atividade_Avaliativa
         static void Main(string[] args)
         {            
             Cliente cliente = new Cliente(1, "Gabriel", "exemple@exemple.com", "123.456.789-10");
-            
+            Cliente cliente1 = new Cliente(2, "Miguel", "exemple@exemple.com", "123.456.789-10");
 
             try
             {

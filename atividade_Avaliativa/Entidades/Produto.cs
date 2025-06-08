@@ -22,29 +22,28 @@ namespace atividade_Avaliativa
             this.nome = nome;
             this.preco = preco;
             this.categoria = categoria;
-
         }
 
         private bool Validate(string nome, double preco, string categoria)
         {
-            if (string.IsNullOrWhiteSpace(nome)) { throw new Exception("Nome não pode ser vazio"); }
-            if (preco <= 0) { throw new Exception("O produto precisa de um preço"); }
-            if (string.IsNullOrWhiteSpace(categoria)) { throw new Exception("Categoria não pode ser vazia"); }
+            if (string.IsNullOrWhiteSpace(nome)) { throw new Exception("O nome do produto não pode ser vazio"); }
+            if (preco <= 0) { throw new Exception("O preço do produto não pode ser menor ou igual a zero"); }
+            if (string.IsNullOrWhiteSpace(categoria)) { throw new Exception("A categoria do produto não pode ser vazia"); }
 
             return true;
         }
 
-        public int getId () { return this.id; }
-        public void setId(int id) { this.id = id; }
+        public int GetId () { return this.id; }
+        public void SetId(int id) { this.id = id; }
 
-        public string getNome () { return this.nome; }
-        public void setNome(string nome) { this.nome = nome; }
+        public string GetNome () { return this.nome; }
+        public void SetNome(string nome) { this.nome = nome; }
 
-        public double getPreco () { return this.preco; }
-        public void setPreco (double preco) { this.preco = preco; }
+        public double GetPreco () { return this.preco; }
+        public void SetPreco (double preco) { this.preco = preco; }
 
-        public string getCategoria () { return this.categoria; }
-        public void setCategoria(string categoria) { this.categoria = categoria; }
+        public string GetCategoria () { return this.categoria; }
+        public void SetCategoria(string categoria) { this.categoria = categoria; }
     }
 
 }

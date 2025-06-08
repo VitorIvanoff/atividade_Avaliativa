@@ -13,7 +13,6 @@ namespace atividade_Avaliativa
         private string email;
         private string cpf;
 
-
         public Cliente(int id, string nome, string email, string cpf)
         {
             this.id = id;
@@ -22,19 +21,16 @@ namespace atividade_Avaliativa
             this.cpf = cpf;
         }
 
+        public int GetId() { return this.id; }
+        public void SetId(int id) { this.id = id; }
 
-        public int getId() { return this.id; }
-        public void setId(int id) { this.id = id; }
+        public string GetNome() { return this.nome; }
+        public void SetNome(string nome) { this.nome = nome; }
 
-        public string getNome() { return this.nome; }
-        public void setNome(string nome) { this.nome = nome; }
+        public string GetEmail() { return this.email; }
+        public void SetEmail(string email) { this.email = email; }
 
-        public string getEmail() { return this.email; }
-        public void setEmail(string email) { this.email = email; }
-
-        public string getCpf() { return this.cpf; }
-        public void setCpf (string cpf) { this.cpf = cpf; }
-
-
+        public string GetCpf() { return this.cpf; }
+        public void SetCpf (string cpf) { this.cpf = cpf; }
     }
 }
