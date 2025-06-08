@@ -16,9 +16,9 @@ namespace atividade_Avaliativa
             this.referencia = referencia;
         }
 
-        public void Info(string message, string[] args)
+        public void Log(string message)
         {
-            Console.WriteLine($"[{referencia} - {DateTime.Now}]" + message, args);
+            Console.WriteLine($"[{referencia} - {DateTime.Now}] " + message);
         }
     }
 }

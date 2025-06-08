@@ -29,8 +29,16 @@ namespace atividade_Avaliativa
         {        
             foreach (ItemPedido itemPedido in this.itensPedido)
             {
-                this.valorTotal += itemPedido.ValorTotalItem(new EstrategiaDescontoPorQuantidade());
+                this.valorTotal += itemPedido.ValorTotalItem();
             }
+        }
+
+        public void DescricaoPedido()
+        {
+            Cliente cliente = this.cliente;
+
+            Console.WriteLine($"Pedido: #{this.GetId()} | Realizado em: {this.GetData()}\n");
+            Console.WriteLine($"\tID: {cliente.GetId()}\n\tCliente: {cliente.GetNome()}\n\tCPF: {cliente.GetCpf()}\n\tE-mail: {cliente.GetEmail()}\n");
         }
 
         public int GetId() { return this.id; }

@@ -21,19 +21,12 @@ namespace atividade_Avaliativa.Servicos
         {
             foreach (Pedido pedido in this.pedidos)
             {
-                Console.WriteLine(pedido.GetId() + " | " + pedido.GetData()+ "\n");
-                Console.WriteLine("\tID: "+ pedido.GetCliente().GetId() +  "\n\tCliente: " + pedido.GetCliente().GetNome() + "\n\tCPF: " + pedido.GetCliente().GetCpf() + "\n\tE-mail: " + pedido.GetCliente().GetEmail() + "\n");
-                Console.WriteLine("\tItens do Pedido: ");
+                pedido.DescricaoPedido();
 
+                Console.WriteLine("\tItens do Pedido:\n");
                 foreach (ItemPedido itemPedido in pedido.GetItensPedido())
                 {
-                    Console.WriteLine("\t\tID: " + itemPedido.GetProduto().GetId());
-                    Console.WriteLine("\t\tProduto: " + itemPedido.GetProduto().GetNome());
-                    Console.WriteLine("\t\tCategoria: " + itemPedido.GetProduto().GetCategoria());
-                    Console.WriteLine("\t\tQuantidade: " + itemPedido.GetQuantidade());
-                    Console.WriteLine("\t\tPreço: R$" + itemPedido.GetProduto().GetPreco());
-                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItem(new EstrategiaDescontoPorQuantidade()));
-                    Console.WriteLine("\t----------------------------------");
+                    itemPedido.DescricaoItemPedido();
                 }
 
                 Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.GetValorTotal()); 

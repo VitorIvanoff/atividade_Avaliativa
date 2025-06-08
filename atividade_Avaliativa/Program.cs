@@ -1,4 +1,5 @@
-﻿using atividade_Avaliativa.Servicos;
+﻿using atividade_Avaliativa.Estrategias;
+using atividade_Avaliativa.Servicos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,9 @@ namespace atividade_Avaliativa
     {
         static void Main(string[] args)
         {            
-            Cliente cliente = new Cliente(1, "Gabriel", "exemple@exemple.com", "123.456.789-10");
-            Cliente cliente1 = new Cliente(2, "Miguel", "exemple@exemple.com", "123.456.789-10");
+            Cliente clienteGabriel = new Cliente(1, "Gabriel", "gabriel@exemple.com", "123.456.789-10");
+            Cliente clienteMiguel = new Cliente(2, "Miguel", "miguel@exemple.com", "903.456.789-10");
+            Cliente clienteIgor = new Cliente(3, "Igor", "igor@exemple.com", "973.456.789-10");
 
             try
             {
@@ -20,11 +22,10 @@ namespace atividade_Avaliativa
                 Produto caneta = new Produto(2, "Caneta", 2.50, "Diversos");
                 Produto borracha = new Produto(3, "borracha", 3.00, "Diversos");
 
-                ItemPedido itemLapis = new ItemPedido(lapis, 12);
-                ItemPedido itemCaneta = new ItemPedido(caneta, 2);
-                ItemPedido itemBorracha = new ItemPedido(borracha, 4);
+                ItemPedido itemLapis = new ItemPedido(lapis, 12, new EstrategiaDescontoPorCategoria());
+                ItemPedido itemCaneta = new ItemPedido(caneta, 2, new EstrategiaDescontoPorQuantidade());
 
-                Pedido pedido = new Pedido(1, cliente, new List<ItemPedido> { itemLapis, itemCaneta }, DateTime.Now);
+                Pedido pedido = new Pedido(1, clienteGabriel, new List<ItemPedido> { itemLapis, itemCaneta }, DateTime.Now);
 
                 Relatorio relatorio = new Relatorio(new List<Pedido> { pedido });
 
@@ -32,7 +33,8 @@ namespace atividade_Avaliativa
             }
             catch(Exception ex) 
             {
-                Console.WriteLine(ex.Message);
+                Logger logger = new Logger("Program");
+                logger.Log(ex.Message);
             }
                         
         }
