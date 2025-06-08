@@ -9,12 +9,12 @@ namespace atividade_Avaliativa
 {
     class Produto
     {
-        private string id { get; set; }
-        private string nome { get; set; }
-        private double preco { get; set; }
-        private string categoria { get; set; }
+        private int id;
+        private string nome;
+        private double preco;
+        private string categoria;
 
-        public Produto(string id, string nome, double preco, string categoria)
+        public Produto(int id, string nome, double preco, string categoria)
         {
             Validate(nome, preco, categoria);
 
@@ -33,6 +33,18 @@ namespace atividade_Avaliativa
 
             return true;
         }
+
+        public int getId () { return id; }
+        public void setId(int id) { this.id = id; }
+
+        public string getNome () { return nome; }
+        public void setNome(string nome) { this.nome = nome; }
+
+        public double getPreco () { return preco; }
+        public void setPreco (double preco) { this.preco = preco; }
+
+        public string getCategoria () { return categoria; }
+        public void setCategoria(string categoria) { this.categoria = categoria; }
     }
 
 }

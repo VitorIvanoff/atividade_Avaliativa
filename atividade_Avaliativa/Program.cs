@@ -13,14 +13,16 @@ namespace atividade_Avaliativa
             Produto produto;
             try
             {
-                 produto = new Produto("1", "Lápis", 0, "Diversos");
+                 produto = new Produto(1, "Lápis", 1.30, "Diversos");
+
+                produto.setNome("caneta"); 
                
             }
             catch(Exception ex) 
             {
                 Console.WriteLine(ex.Message);
             }
-
+            
             
         }
     }
