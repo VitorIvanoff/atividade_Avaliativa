@@ -31,7 +31,7 @@ namespace atividade_Avaliativa
 
             foreach (ItemPedido itemPedido in this.itensPedido)
             {
-                this.valorTotal += itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorCategoria());
+                this.valorTotal += itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorQuantidade());
             }
         }
 

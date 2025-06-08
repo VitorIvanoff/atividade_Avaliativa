@@ -25,7 +25,7 @@ namespace atividade_Avaliativa
 
         public double ValorTotalItemComDesconto(IEstrategiaDesconto estrategiaDesconto)
         {
-            return estrategiaDesconto.AplicarDesconto(this.produto) * quantidade;
+            return estrategiaDesconto.AplicarDesconto(this) * quantidade;
         }
 
         public Produto getProduto() {return this.produto;}

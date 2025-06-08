@@ -20,7 +20,7 @@ namespace atividade_Avaliativa
                 Produto caneta = new Produto(2, "Caneta", 2.50, "Diversos");
                 Produto borracha = new Produto(3, "borracha", 3.00, "Diversos");
 
-                ItemPedido itemLapis = new ItemPedido(lapis, 10);
+                ItemPedido itemLapis = new ItemPedido(lapis, 12);
                 ItemPedido itemCaneta = new ItemPedido(caneta, 2);
                 ItemPedido itemBorracha = new ItemPedido(borracha, 4);
 

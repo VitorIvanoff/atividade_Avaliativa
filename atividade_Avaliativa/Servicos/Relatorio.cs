@@ -32,7 +32,7 @@ namespace atividade_Avaliativa.Servicos
                     Console.WriteLine("\t\tCategoria: " + itemPedido.getProduto().getCategoria());
                     Console.WriteLine("\t\tQuantidade: " + itemPedido.getQuantidade());
                     Console.WriteLine("\t\tPreço: R$" + itemPedido.getProduto().getPreco());
-                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorCategoria()));
+                    Console.WriteLine("\t\tSub Total: R$" + itemPedido.ValorTotalItemComDesconto(new EstrategiaDescontoPorQuantidade()));
                     Console.WriteLine("\t----------------------------------");
                 }
                 Console.WriteLine("\n\tValor Total do Pedido: R$" +pedido.getValorTotal()); 

@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace atividade_Avaliativa.Estrategias
 {
-
-    class EstrategiaDescontoPorCategoria : IEstrategiaDesconto
+    class EstrategiaDescontoPorQuantidade : IEstrategiaDesconto
     {
         public double AplicarDesconto(ItemPedido itemPedido)
         {
             double precoAtual = itemPedido.getProduto().getPreco();
 
-            if (itemPedido.getProduto().getCategoria() == "Diversos") return (precoAtual - (precoAtual * 0.10));
+            if (itemPedido.getQuantidade() > 10) return (precoAtual - (precoAtual * 0.15));
 
-            return precoAtual;            
+            return precoAtual;
         }
     }
 }
