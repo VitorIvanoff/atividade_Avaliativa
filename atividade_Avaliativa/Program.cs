@@ -12,4 +12,15 @@ namespace atividade_Avaliativa
         {
         }
     }
+
+    class Produto
+    {
+        private string id { get; set; }
+        private string nome { get; set; }
+        private string pedido { get; set; }
+        private string categoria { get; set; }
+
+
+    }
+
 }
